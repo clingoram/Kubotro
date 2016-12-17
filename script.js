@@ -13,11 +13,22 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('So you want to learn about Esther? Just say HELLO to get started.')
+            return bot.say("Hi!I'm Kubotro. Just say HELLO to get started.")
                 .then(() => 'speak');
         }
     },
-
+    
+    askName: {
+        prompt: (bot) => bot.say("What\'s your name?"),
+        receive: (bot, message) => {
+            //const name=message.text
+            const name = message.text;
+            return bot.setProp('name', name)
+                .then(() => bot.say("I\'ll call you ${name}." + "Is that OK? %[Yes](postback:yes) %[No](postback:no)"))
+                .then(() => 'speak');
+        }
+    },
+    
     speak: {
         receive: (bot, message) => {
 
@@ -44,7 +55,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say(`I didn't understand that.`).then(() => 'speak');
+                    return bot.say("I didn't understand that.").then(() => 'speak');
                 }
 
                 var response = scriptRules[upperText];
@@ -64,7 +75,16 @@ module.exports = new Script({
 
             return updateSilent()
                 .then(getSilent)
-                .then(processMessage);
+                .then(processMessage)
+                .then('finish');
+        }
+    },
+        finish: {
+        promopt: (bot) => bot.say("Is anything I can help?"),
+        receive: (bot, message) => {
+            return bot.getProp('name')
+                .then((name) => bot.say("Sorry ${ name}, my creator didn\'t " + "teach me how to do this yet!"))
+                .then(() => 'finish');
         }
     }
 });
