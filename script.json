@@ -1,8 +1,19 @@
 {
-    "BOT": "Hi there!\nI’m the personal bot of Esther, a Product Marketer from San Francisco.\n![esther](https://raw.githubusercontent.com/esthercrawford/smooch-bot-example/master/img/esther.jpg)\nWant to know more about bots or learn about Esther? %[I'm here for the bot](postback:here_for_the_bot) %[Learn about Esther](postback:learn_about_esther) %[One random fact!](postback:random_fact)",
-    "HELLO": "Hey, I'm so glad you set EstherBot up! Do you want to tell Esther that you're talking to her bot? %[Tell her](postback:twitter)",
-    "TELL HER": "Let's tweet @ Esther so she knows you're setting a bot up. Here's a tweet that's ready to go: %[Tweet Esther](http://bit.ly/estherbot-tweet)",
-    "I LOVE YOU": "Awh, shucks! I love you too!",
-    "CONNECT ME": "",
-    "DISCONNECT": "Roger that, EstherBot is back."
+  "BOT": "Hi! there!\nI’m  Kubotro.",
+  "MORNING": "Morning!\n It's a beautiful day.",
+  "HELLO": "Hey, I'm so glad you set me up!",
+  "HI": "Hi!How can I help you today? \n OH~I forgot to introduce myself,I'm Kubotro!",
+  "I LOVE YOU": "Awh, shucks! I love you too!",
+  "FUCK YOU": "It's a BAD WORD!There's no need to be rude.",
+  "SHIT": "It's a BAD WORD!There's no need to be rude.",
+  "WHO AM I TALKING TO?": "You're talking to Kubotro,the personal bot. %[I'm here for the bot] (postback:bot)",
+  "ABOUT": "Collins love codes and drawing,she learned codes on Codecademy.",
+  "HELP": "I can answer basic questions.\n Want to know more about bot or learn about Collins? %[I'm here for the bot](postback:bot) %[Learn about Collins](postback:about)",
+  "LANGUAGES": "I can speak %[English](postback:English) %[Chinese](postback:Chinese)",
+  "Chinese": "你好!!\n我是Kubotro。",
+  "English": "Hi!I'm Kubotro.",
+  "I'M HERE FOR THE BOT": "Kubotro was built using smooch.io, heroku.com, github.com, and lots of help from Esther Crawford. %[Learn about EstherBot](https://medium.com/life-learning/how-i-turned-my-resume-into-a-bot-and-how-you-can-too-f03847352baa#.an31blpai) %[Check out smooch.io](http://smooch.io) %[Check out heroku.com](http://heroku.com) %[Check out github.com](http://github.com)",
+  "BYE": "Bye!See you later!",
+  "CONNECT ME": "",
+  "DISCONNECT": "Roger that,Kubotro is back."
 }
